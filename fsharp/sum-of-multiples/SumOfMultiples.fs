@@ -1,6 +1,6 @@
 ﻿module public SumOfMultiples
 
-type SumOfMultiples(coefficients: List<int>) = 
+type SumOfMultiples(coefficients: seq<int>) = 
 
     let multipleOfCoefficients num = 
         Seq.exists (fun coefficient -> num % coefficient = 0) coefficients
