@@ -34,3 +34,11 @@ type SumOfMultiplesTest() =
     [<Test>]
     member tc.Configurable_43_47_to_10000() = 
         Assert.That(SumOfMultiples([43; 47]).To(10000), Is.EqualTo(2203160))
+
+    [<Test>]
+    member tc.Configurable_with_7_13_0_17_to_20() = 
+        Assert.That(SumOfMultiples([7; 13; 0; 17]).To(20), Is.EqualTo(51))
+
+    [<Test>]
+    member tc.Configurable_with_negative_numbers_7_13_0_17_to_20() = 
+        Assert.That(SumOfMultiples([7; 13; 0; -17]).To(20), Is.EqualTo(51))
